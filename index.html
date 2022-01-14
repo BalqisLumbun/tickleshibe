@@ -54,11 +54,16 @@
             padding: 1rem;
             background-color: #3C1F17;
         }
+        
+        #shibe {
+            cursor: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e91ef21f-6e00-410a-9e03-dd5338adb878/dey3hv4-871af5f6-54af-44cd-a686-925c716689e5.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U5MWVmMjFmLTZlMDAtNDEwYS05ZTAzLWRkNTMzOGFkYjg3OFwvZGV5M2h2NC04NzFhZjVmNi01NGFmLTQ0Y2QtYTY4Ni05MjVjNzE2Njg5ZTUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.XQa2uSNpLsmUyfO9EMKl8Zd9Of5t88ttCI74ABCs8Ts'), pointer;
+        }
     </style>
 </head>
 
 <body>
     <center>
+        <audio src="6.mp3" id="myAudio"></audio>
         <div class="container">
             <h1 class="text-center">TICKLE THE SHIBE!</h1>
             <h3 class="text-center">Make Shibe happy with tickle.</h3>
@@ -66,6 +71,7 @@
                 <div id="tickleshib">0</div>
             </p>
         </div>
+        <div class="cursor"></div>
         <img id="shibe" src="1.png" height="400px" width="400px" onclick="tickling()" onmouseout="nohaha()" onmouseover="haha()">
         <h5>Made by : Oka!</h5>
     </center>
@@ -82,6 +88,7 @@
             tickles += pointy()
             document.getElementById('tickleshib').innerHTML = tickles;
             document.getElementById('shibe').src = "2.png";
+            document.getElementById("myAudio").play();
         }
 
         function haha() {
